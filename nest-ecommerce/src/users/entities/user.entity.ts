@@ -20,6 +20,12 @@ export class User extends Document {
   @Prop({ default: null })
   cartid: string;
 
+  @Prop()
+  resetToken: string;
+
+  @Prop()
+  resetTokenExpires: Date;
+
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
