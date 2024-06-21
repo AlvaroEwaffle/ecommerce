@@ -82,7 +82,18 @@ const Login = () => {
           >
             Sign In
           </Button>
+
+
         </Box>
+        <Button
+          type="RequestPassword"
+          fullWidth
+          variant="outlined"
+          onClick={() => navigate('/forgot-password')}
+          sx={{ mb: 2 }}
+        >
+          Forgot Password?
+        </Button>
       </Box>
     </Container>
   );

@@ -12,6 +12,8 @@ import ProductList from './components/Product/ProductList';
 import Cart from './components/Cart/Cart';
 import Wrapper from './styles/Wrapper';
 import Success from './pages/Success';
+import RequestPasswordReset from './components/PasswordReset/RequestPasswordReset';
+import ResetPassword from './components/PasswordReset/ResetPassword';
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
               <Route path="/products" element={<ProductList />} />
               <Route path="/carts" element={<Cart />} />
               <Route path="/success" element={<Success />} />
+              <Route path="/forgot-password" element={<RequestPasswordReset />} />
+              <Route path="/reset-password/:token" element={<ResetPassword />} />
             </Routes>
           </Wrapper>
         </Router>
