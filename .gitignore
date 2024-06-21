@@ -1,0 +1,4 @@
+./client/client-eccomerce/node_modules
+./client/client-eccomerce/.env
+./nest-eccomerce/node_modules
+./nest-eccomerce/.env
