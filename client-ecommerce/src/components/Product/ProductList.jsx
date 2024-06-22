@@ -18,7 +18,7 @@ const ProductList = () => {
 
 
   useEffect(() => {
-    console.log(isAuthenticated, loading);
+
     if (!loading) {
       if (!isAuthenticated) {
         navigate('/login');
