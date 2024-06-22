@@ -16,7 +16,10 @@ async function bootstrap() {
   app.use(cookieParser());
   // Enable CORS using environment variables
   app.enableCors({
-    origin: 'http://localhost:5173, https://frontend-production-f390.up.railway.app,',
+    origin: [
+      'http://localhost:5173',
+      'https://frontend-production-f390.up.railway.app'
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true, // Allow cookies to be sent
   });
