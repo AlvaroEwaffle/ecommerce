@@ -5,6 +5,7 @@ import * as bcrypt from 'bcryptjs';
 import { User, UserDocument } from './entities/user.entity';
 import { CreateUserDto } from './dto/create-user.dto';
 import { Cart, CartDocument } from '../carts/entities/cart.entity'; // Adjust the path accordingly
+import { UpdateUserDto } from './dto/update-user.dto';
 
 
 @Injectable()
@@ -36,11 +37,17 @@ export class UsersService {
     return user;
   }
 
-  async update(id: string, updateUserDto: CreateUserDto): Promise<User> {
+  async update(id: string, updateUserDto: UpdateUserDto): Promise<User> {
     const user = await this.userModel.findByIdAndUpdate(id, updateUserDto, { new: true }).exec();
     if (!user) {
       throw new NotFoundException('User not found');
     }
     return user;
+  }
+
+  async findAll(): Promise<User[]> {
+    //Return only email, name, role, cartid, id,
+    return this.userModel.find().select({ email: 1, name: 1, role: 1, cartid: 1, _id: 1 }).exec();
+
   }
 }
