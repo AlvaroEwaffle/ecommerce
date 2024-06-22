@@ -1,8 +1,0 @@
-{
-    "build": {
-      "builder": "docker",
-      "args": {
-        "NODE_ENV": "production"
-      }
-    }
-  }
