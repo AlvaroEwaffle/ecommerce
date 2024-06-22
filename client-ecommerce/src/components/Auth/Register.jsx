@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, Box, Grid, Link } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import api from '../services/api';
+import api from '../../services/api';
 
 const Register = () => {
   const navigate = useNavigate();

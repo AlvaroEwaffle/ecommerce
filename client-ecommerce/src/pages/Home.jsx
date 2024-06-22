@@ -48,7 +48,7 @@ const Home = () => {
         {isAuthenticated ? (
           <>
             <Typography variant="h6">
-              Hola, {user.name}!
+              Hola, {user.name} {user.role}
             </Typography>
 
             <Box mt={2}>
@@ -69,6 +69,18 @@ const Home = () => {
                   >
                     Ver tu Cart
                   </Button>
+
+                  {user.role === 'admin' && (
+                    <Button
+                      variant="contained"
+                      color="warning"
+                      onClick={() => navigate('/users')}
+                      sx={{ marginLeft: 2 }}
+                    >
+                      User Admin
+                    </Button>
+                  )}
+
                   <Button
                     variant="outlined"
                     onClick={handleLogoutClick}
@@ -76,6 +88,8 @@ const Home = () => {
                   >
                     Logout
                   </Button>
+
+                  
                 </Stack>
               </Box>
             </Box>
