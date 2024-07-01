@@ -28,8 +28,8 @@ async function bootstrap() {
 
   // Swagger setup
   const config = new DocumentBuilder()
-    .setTitle('Your App Name')
-    .setDescription('API description')
+    .setTitle('Ecommerce app desarrollada por Alvaro Villena para curso de backend de coderhouse.')
+    .setDescription('Api rest de ecommerce, implementada con nestjs y mongodb. Multiples funciones.')
     .setVersion('1.0')
     .addTag('api')
     .build();
