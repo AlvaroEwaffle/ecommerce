@@ -46,7 +46,7 @@ const Navbar = () => {
       {!isAuthenticated && (
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Reacr e-CommerceApp
+            Reac e-Commerce
           </Typography>
           <Box sx={{ display: 'flex', gap: 2 }}>
             <Button color="inherit" component={Link} to="/login">
