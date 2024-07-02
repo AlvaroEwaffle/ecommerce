@@ -15,6 +15,7 @@ import Success from './components/Ticket/Success';
 import RequestPasswordReset from './components/Auth/RequestPasswordReset';
 import ResetPassword from './components/Auth/ResetPassword';
 import UserManagement from './components/Auth/UserManagement';
+import Navbar from './components/Navbar';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
+          <Navbar />
           <Wrapper>
             <Routes>
               <Route exact path="/" element={<Home />} />
@@ -33,7 +35,6 @@ const App = () => {
               <Route path="/forgot-password" element={<RequestPasswordReset />} />
               <Route path="/reset-password/:token" element={<ResetPassword />} />
               <Route path="/users" element={<UserManagement />} />
-
             </Routes>
           </Wrapper>
         </Router>
